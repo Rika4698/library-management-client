@@ -22,8 +22,8 @@ export const bookApi = createApi({
         }),
 
         updateBook: builder.mutation({
-            query:({id,data}) => ({
-                url:`/books/${id}`,
+            query:({bookId,data}) => ({
+                url:`/books/${bookId}`,
                 method:'PUT',
                 body:data,
             }),

@@ -1,4 +1,4 @@
-import { useGetBooksQuery, useUpdateBookMutation } from "@/redux/api/baseApi";
+import { useDeleteBookMutation, useGetBooksQuery} from "@/redux/api/baseApi";
 import type { Book } from "@/types/types";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -9,10 +9,15 @@ import swal from 'sweetalert';
 
 const AllBook = () => {
     const { data, isLoading, isError } = useGetBooksQuery(undefined);
-    const[deleteBook] = useUpdateBookMutation();
+    const[deleteBook] = useDeleteBookMutation();
     const navigate = useNavigate();
 
-    const handleDelete = async(id:string) =>{
+
+    const handleDelete = async (id: string) =>{
+        if (!id) {
+    toast.error("Invalid Book ID");
+    return;
+  } 
         const willDelete = await swal({
             title:"Are you sure?",
             text:"Do you really want to delete this book?",
