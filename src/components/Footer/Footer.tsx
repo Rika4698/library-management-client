@@ -20,7 +20,7 @@ const Footer = () => {
             />
           </Link>
           <address className="not-italic mt-3">Dhaka, Bangladesh</address>
-          <a href="tel:+7878788" className="hover:underline">
+          <a href="tel:+7878788" className="hover:underline ">
             +88017878787878
           </a>
           <p>bookshelf@info.com</p>
