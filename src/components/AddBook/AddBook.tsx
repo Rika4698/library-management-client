@@ -25,6 +25,10 @@ const AddBook = () => {
     });
 
     const onSubmit = async (data: bookSchemaValues) =>{
+        if(data.copies === 0){
+            data.available =false;
+        }
+        
         try{
             await Books(data).unwrap();
             toast.success(
