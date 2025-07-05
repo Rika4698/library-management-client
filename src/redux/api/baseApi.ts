@@ -21,6 +21,15 @@ export const bookApi = createApi({
             invalidatesTags:["Books"],
         }),
 
+        getBookById:builder.query({
+            query:(id) =>({
+                url:`/books/${id}`,
+                method:"GET",
+
+            }),
+            providesTags:["Books"],
+        }),
+
         updateBook: builder.mutation({
             query:({bookId,data}) => ({
                 url:`/books/${bookId}`,
@@ -46,6 +55,7 @@ export const bookApi = createApi({
 export const {
     useGetBooksQuery,
     useAddBookMutation,
+    useGetBookByIdQuery,
     useUpdateBookMutation,
     useDeleteBookMutation,
 } = bookApi;

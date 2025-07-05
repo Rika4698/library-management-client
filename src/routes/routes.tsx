@@ -4,6 +4,7 @@ import ErrorHandler from "../pages/ErrorHandler";
 import Home from "../pages/Home";
 import AddBook from "../components/AddBook/AddBook";
 import AllBook from "@/components/AllBook/AllBook";
+import BookPage from "@/pages/BookPage";
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         {
            path:"/books",
            element:<AllBook></AllBook>,
+        },
+        {
+            path:"/books/:id",
+            element:<BookPage></BookPage>,
         },
     ], 
   },

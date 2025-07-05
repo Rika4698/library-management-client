@@ -93,13 +93,17 @@ const AllBook = () => {
                                             ) : <span className="text-red-500 font-medium">Unavailable</span>}</td>
                                             <td className="py-2 px-4 space-x-4  text-center whitespace-nowrap">
 
-                                                <button onClick={() => navigate(`/edit-book/${book._id}`)} title="Edit" className="px-4 py-2 bg-white hover:bg-blue-500 text-blue-500 hover:text-white border border-blue-600 font-medium rounded-lg">
+                                                <button onClick={() => navigate(`/books/${book._id}`)} title="View" className="px-4 py-2 bg-white hover:bg-sky-500 text-sky-500 hover:text-white border border-sky-600 font-medium rounded-lg">
+                                                    View
+                                                </button>
+
+                                                <button onClick={() => navigate(`/edit-book/${book._id}`)} title="Edit" className="px-4 py-2 bg-white hover:bg-blue-600 text-blue-600 hover:text-white border border-blue-700 font-medium rounded-lg">
                                                     Edit
                                                 </button>
-                                                <button className={`px-4 py-2 border font-medium rounded-xl ${!book.available?"bg-slate-600 text-white cursor-not-allowed":"hover:bg-green-500 text-green-500 hover:text-white bg-white  border-green-600 "}`} disabled={!book.available}>
+                                                <button title="Borrow" className={`px-4 py-2 border font-medium rounded-xl ${!book.available?"bg-slate-600 text-white cursor-not-allowed":"hover:bg-green-500 text-green-500 hover:text-white bg-white  border-green-600 "}`} disabled={!book.available}>
                                                     Borrow
                                                 </button>
-                                                <button onClick={()=> handleDelete(book._id)} className="px-3 py-2 bg-white hover:bg-red-500 text-red-500 hover:text-white border border-red-600 font-medium rounded-lg" >
+                                                <button title="Delete" onClick={()=> handleDelete(book._id)} className="px-3 py-2 bg-white hover:bg-red-500 text-red-500 hover:text-white border border-red-600 font-medium rounded-lg" >
                                                     Delete
                                                 </button>
                                             </td>
