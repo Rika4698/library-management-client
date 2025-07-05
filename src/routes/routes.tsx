@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import AddBook from "../components/AddBook/AddBook";
 import AllBook from "@/components/AllBook/AllBook";
 import BookPage from "@/pages/BookPage";
+import UpdateBook from "@/components/UpdateBook/UpdateBook";
 
 
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         {
             path:"/books/:id",
             element:<BookPage></BookPage>,
+        },
+        {
+            path:"/edit-book/:id",
+            element:<UpdateBook></UpdateBook>,
         },
     ], 
   },
