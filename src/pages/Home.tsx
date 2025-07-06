@@ -1,8 +1,10 @@
-import React from 'react';
+import BookGrid from "./BookGrid";
+
 
 const Home = () => {
     return (
         <div>
+            <BookGrid></BookGrid>
             
         </div>
     );

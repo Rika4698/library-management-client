@@ -10,7 +10,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 
 
-const ModalBorrow:React.FC = () =>{
+const ModalBorrow = () => {
     const navigate = useNavigate();
     const{bookId} = useParams<{bookId:string}>();
     
