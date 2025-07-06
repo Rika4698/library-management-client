@@ -27,15 +27,12 @@ const Navbar = () => {
                   isPending ? "pending" : isActive ?  "bg-[#bd1ddd] font-bold text-lg font-serif px-4 py-2 rounded-3xl text-white transform duration-300 hover:scale-110" : "font-medium text-slate-800 text-lg font-serif dark:text-white"
                 }>All Book</NavLink></li>
 
-                    <li className="group max-lg:border-b max-lg:py-3 px-3 relative"><NavLink to="/about" onClick={() => setIsOpen(false)}
+                    <li className="group max-lg:border-b max-lg:py-3 px-3 relative"><NavLink to="/borrow-summary" onClick={() => setIsOpen(false)}
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ?  "bg-[#bd1ddd] font-bold text-lg font-serif px-4 py-2 rounded-3xl text-white transform duration-300 hover:scale-110 " : "font-medium text-slate-800 text-lg font-serif dark:text-white"
                 }>Borrow Summary</NavLink></li>
 
-                    <li className="group max-lg:border-b max-lg:py-3 px-3 relative"><NavLink to="/contact" onClick={() => setIsOpen(false)}
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ?  "bg-[#bd1ddd] font-bold text-lg font-serif px-4 py-2 rounded-3xl text-white transform duration-300 hover:scale-110" : "font-medium text-slate-800 text-lg font-serif dark:text-white"
-                }>About Us</NavLink></li>
+                    
                     
                     
                     

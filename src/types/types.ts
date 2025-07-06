@@ -9,3 +9,15 @@ export interface Book {
   available: boolean;
   
 }
+
+
+
+export interface BorrowSummary {
+  _id: string;  
+  book: {
+    title: string;
+    isbn: string;
+  };
+  totalQuantity: number;  
+}
+

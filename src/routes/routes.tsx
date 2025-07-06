@@ -6,6 +6,9 @@ import AddBook from "../components/AddBook/AddBook";
 import AllBook from "@/components/AllBook/AllBook";
 import BookPage from "@/pages/BookPage";
 import UpdateBook from "@/components/UpdateBook/UpdateBook";
+import ModalBorrow from "@/ModalBorrow/ModalBorrow";
+import Borrowsummary from "@/components/BorrowSummary/BorrowSummary";
+
 
 
 
@@ -35,6 +38,15 @@ const router = createBrowserRouter([
             path:"/edit-book/:id",
             element:<UpdateBook></UpdateBook>,
         },
+        {
+            path:"/borrow/:bookId",
+            element:<ModalBorrow></ModalBorrow>,
+        },
+        {
+            path:"/borrow-summary",
+            element:<Borrowsummary></Borrowsummary>,
+        },
+
     ], 
   },
 ]);

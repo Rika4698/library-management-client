@@ -41,6 +41,12 @@ const UpdateBook = () => {
     }, [book, reset]);
 
     const onSubmit =async (data: bookSchemaValues) =>{
+         if (data.copies === 0) {
+    data.available = false;
+  }
+    if (data.copies > 0) {
+    data.available = true;
+  }
         try{
             await updateBook({id:id, ...data}).unwrap();
             toast.success("Book updated successfully");

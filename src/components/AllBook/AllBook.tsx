@@ -1,3 +1,4 @@
+
 import { useDeleteBookMutation, useGetBooksQuery} from "@/redux/api/baseApi";
 import type { Book } from "@/types/types";
 import toast from "react-hot-toast";
@@ -11,6 +12,8 @@ const AllBook = () => {
     const { data, isLoading, isError } = useGetBooksQuery(undefined);
     const[deleteBook] = useDeleteBookMutation();
     const navigate = useNavigate();
+
+    
 
 
     const handleDelete = async (id: string) =>{
@@ -65,8 +68,8 @@ const AllBook = () => {
                 <div className='overflow-x-auto border rounded-lg shadow'>
                     <table className='min-w-full table-auto text-center text-sm'>
                         <thead className='bg-gray-100'>
-                            <tr>
-                                <th className='px-4 py-2 text-gray-500 uppercase'>Title</th>
+                            <tr >
+                                <th  className='px-4 py-2  text-gray-500 uppercase'>Title</th>
                                 <th className='px-4 py-2 text-gray-500 uppercase'>Author</th>
                                 <th className='px-4 py-2 text-gray-500 uppercase'>Genre</th>
                                 <th className='px-4 py-2 text-gray-500 uppercase'>ISBN</th>
@@ -84,8 +87,8 @@ const AllBook = () => {
                                 ) : (
                                     data?.data?.map((book: Book) => (
                                         <tr key={book._id} className="border-t hover:bg-gray-50">
-                                            <td className="px-4 py-2 text-sm ">{book.title}</td>
-                                            <td className="px-4 py-2 text-sm font-medium">{book.author}</td>
+                                            <td className="px-4 py-2 text-sm whitespace-nowrap">{book.title}</td>
+                                            <td className="px-4 py-2 text-sm font-medium whitespace-nowrap">{book.author}</td>
                                             <td className="px-4 py-2 text-sm ">{book.genre}</td>
                                             <td className="px-4 py-2 text-sm ">{book.isbn}</td>
                                             <td className="px-4 py-2 text-sm ">{book.copies}</td>
@@ -100,9 +103,11 @@ const AllBook = () => {
                                                 <button onClick={() => navigate(`/edit-book/${book._id}`)} title="Edit" className="px-4 py-2 bg-white hover:bg-blue-600 text-blue-600 hover:text-white border border-blue-700 font-medium rounded-lg">
                                                     Edit
                                                 </button>
-                                                <button title="Borrow" className={`px-4 py-2 border font-medium rounded-xl ${!book.available?"bg-slate-600 text-white cursor-not-allowed":"hover:bg-green-500 text-green-500 hover:text-white bg-white  border-green-600 "}`} disabled={!book.available}>
+
+                                                <button onClick={() => navigate(`/borrow/${book._id}`)}  title="Borrow" className={`px-4 py-2 border font-medium rounded-xl ${!book.available?"bg-slate-600 text-white cursor-not-allowed":"hover:bg-green-500 text-green-500 hover:text-white bg-white  border-green-600 "}`} disabled={!book.available}>
                                                     Borrow
                                                 </button>
+
                                                 <button title="Delete" onClick={()=> handleDelete(book._id)} className="px-3 py-2 bg-white hover:bg-red-500 text-red-500 hover:text-white border border-red-600 font-medium rounded-lg" >
                                                     Delete
                                                 </button>
@@ -115,6 +120,8 @@ const AllBook = () => {
                         </tbody>
 
                     </table>
+
+                  
 
                 </div>
             </div>

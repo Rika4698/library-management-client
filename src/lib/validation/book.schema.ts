@@ -24,3 +24,21 @@ export const bookSchema = z.object({
 });
 
 export type bookSchemaValues = z.infer<typeof bookSchema>;
+
+
+export const borrowSchema = z.object({
+  book: z.string().min(1, "Book ID is required"),
+  quantity: z
+    .number({ invalid_type_error: "Quantity must be a number" })
+    .int("Quantity must be an integer")
+    .min(1, "Quantity must be at least 1"),
+  dueDate: z
+    .string()
+    .min(1, "Due date is required")
+    .refine(
+      (dateStr) => !isNaN(Date.parse(dateStr)),
+      "Due date must be a valid date"
+    ),
+});
+
+export type BorrowFormValues = z.infer<typeof borrowSchema>;
