@@ -7,15 +7,16 @@
 
 ## Technology Used
 
--   Typescript
--   React
--   React Router DOM
--   Tailwind CSS
--   Shadcn
--   Redux Toolkit
--   RTK Query
--   react-awesome-reveal
--   React Hot Toast
+- **Frontend:** React.js, TypeScript, Tailwind CSS, Shadcn UI, React Router, Redux Toolkit + RTK Query
+
+- **Backend:** Express.js, TypeScript, MongoDB, Mongoose, Zod
+
+- **State/API Management:** Redux Toolkit Query,
+
+- **Database:** MongoDB (Mongoose Models)
+
+- **UX Enhancements:** React Hot Toast, SweetAlert, react-awesome-reveal
+
 
 <br/>
 
