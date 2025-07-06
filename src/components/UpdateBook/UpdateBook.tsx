@@ -57,10 +57,10 @@ const UpdateBook = () => {
         }
     };
     if(isLoading)
-        return <p className="text-gray-600 text-center mt-20">Loading book data...</p>
+        return <p className="text-gray-600 text-center mt-28">Loading book data...</p>
 
     if(isError)
-        return <p className="text-gray-600 text-center mt-20">Error loading book data...</p>
+        return <p className="text-gray-600 text-center mt-28">Error loading book data...</p>
     return (
         <div className="mt-20">
            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 max-w-4xl mx-auto p-4">

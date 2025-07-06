@@ -35,14 +35,14 @@ const ModalBorrow = () => {
     const quantityValue = watch("quantity");
 
     if(!bookId)
-        return <p className="text-center mt-20 text-red-500">Invalid book ID</p>;
+        return <p className="text-center mt-28 text-red-500">Invalid book ID</p>;
 
     if (isError || !bookData) {
-    return <p className="text-center mt-10 text-red-500">Failed to load book data</p>;
+    return <p className="text-center mt-28 text-red-500">Failed to load book data</p>;
   }
 
     if(!bookData.available){
-        return <p className="text-center mt-20 text-red-500 ">Sorry, this book is currently unavailable.</p>
+        return <p className="text-center mt-28 text-red-500 ">Sorry, this book is currently unavailable.</p>
     }
 
 

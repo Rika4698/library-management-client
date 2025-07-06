@@ -56,9 +56,9 @@ const AllBook = () => {
     };
 
     if(isLoading)
-        return <p className="text-center mt-10 text-gray-600">Loading books...</p>;
+        return <p className="text-center mt-28 text-gray-600">Loading books...</p>;
 
-    if (isError) return <p className="text-center text-red-500 mt-10">Failed to fetch books</p>;
+    if (isError) return <p className="text-center text-red-500 mt-28">Failed to fetch books</p>;
 
     
 

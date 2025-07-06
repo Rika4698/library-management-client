@@ -9,10 +9,10 @@ const BookPage = () => {
     
     const book = data?. data;
 
-    if(isLoading) return <p className="text-center text-gray-600 mt-20">Loading book details...</p>
+    if(isLoading) return <p className="text-center text-gray-600 mt-28">Loading book details...</p>
 
     if(isError || !book)
-        return <p className="text-center text-gray-600 mt-20">Book not found</p>
+        return <p className="text-center text-gray-600 mt-28">Book not found</p>
     return (
         <div>
         <div className='max-w-5xl mx-auto p-4 mt-32 items-center justify-center flex lg:text-xl'>

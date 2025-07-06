@@ -64,13 +64,13 @@ const BookGrid = () => {
   }
 
   if (isError || !book) {
-    return <p className="text-center text-red-500 mt-10">Failed to load books.</p>;
+    return <p className="text-center text-red-500 mt-28">Failed to load books.</p>;
   }
 
     return (
         <div className="mt-28">
            <h2 className="text-5xl font-bold text-center text-purple-600 mb-8">Books</h2>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 mx-auto">
             {
                 book.slice(0,6).map((item: Book) => (
                        <motion.div
@@ -81,8 +81,8 @@ const BookGrid = () => {
           >
             <Card className="shadow-lg hover:shadow-xl transition duration-300">
               <CardContent className="p-4 space-y-2">
-                <h3 className="text-xl font-semibold text-purple-700">{item.title}</h3>
-                <p className="text-gray-600">Author: {item.author}</p>
+                <h3 className="text-xl font-semibold text-purple-900">{item.title}</h3>
+                <p className="rounded-full w-fit bg-purple-500 text-white px-3 font-semibold">Author: {item.author}</p>
                 <p className="text-gray-600">Genre: {item.genre}</p>
                 <p className="text-sm text-gray-500 font-medium">ISBN: {item.isbn}</p>
                 <p className={`font-medium ${item.copies > 0 ?"text-green-600":"text-red-500"}`}>Copies: {item.copies}</p>
@@ -105,7 +105,14 @@ const BookGrid = () => {
                 ))
             }
 
-            </div> 
+            
+            </div>
+
+            
+            <div className="flex justify-center items-center mt-10">
+                <button onClick={() => navigate(`/books`)} className="text-xl text-purple-600 font-semibold hover:underline">See more -</button> 
+             </div>
+
         </div>
     );
 };
