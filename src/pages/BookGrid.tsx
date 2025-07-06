@@ -11,7 +11,8 @@ import toast from "react-hot-toast";
 const BookGrid = () => {
     const navigate = useNavigate();
     const{data, isLoading, isError} = useGetBooksQuery(undefined);
-    const book = data?.data;
+    const book = data?.data?.data;
+    // console.log(book);
     const[deleteBook]= useDeleteBookMutation();
 
     const handleDelete = async (id:string) =>{

@@ -1,70 +1,63 @@
-# React + TypeScript + Vite
+## BookShelf Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**BookShelf** is a dynamic *minimal library management application* that enables users to manage books and borrowing activities efficiently. Built using modern technologies and clean architecture, it features a user-friendly UI, robust backend, and real-time validation.
 
-Currently, two official plugins are available:
+<br/>
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology Used
 
-## Expanding the ESLint configuration
+-   Typescript
+-   React
+-   React Router DOM
+-   Tailwind CSS
+-   Shadcn
+-   Redux Toolkit
+-   RTK Query
+-   react-awesome-reveal
+-   React Hot Toast
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<br/>
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Essential links: Home, All Books, Add Book, Borrow Summary
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Book Management: Create, read, update, delete books with genre.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Borrow Functionality: Borrow available books with validation and automatic availability tracking.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Borrow Summary: Aggregated borrow records with book and user details.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-"# library-management-client" 
+- Validation & Error Handling: Zod-based input validation, centralized error handling, custom error messages.
+
+- User Feedback: Real-time toast notifications, deletion confirmation modals.
+
+- Clean UI: Responsive design using Tailwind and Shadcn UI components.
+
+
+<br/>
+<br/>
+
+
+## How to Run the Project
+
+Clone the Repository
+
+git clone https://github.com/Rika4698/library-management-client.git
+
+cd Library-Management-Backend
+
+## Install Dependencies
+
+npm install
+
+npm run dev
+
+The server will start running on http://localhost:5000.
+
+Live Server Link: https://library-management-server-liard.vercel.app/
+
+Live link: https://library-management-client-ebon.vercel.app/
+
+
